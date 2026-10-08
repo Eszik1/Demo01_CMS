@@ -1,9 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CMS.BusinessLayer
 {
     public class Customer
@@ -34,6 +28,8 @@ namespace CMS.BusinessLayer
         }
         public string FirstName { get; set; }
         public string EmailAddress { get; set; }
+        public Address HomeAddress { get; set; }
+        public Address WorkAddress { get; set; }
         public int CustomerId { get; private set; }
         public string FullName
         {
@@ -52,33 +48,6 @@ namespace CMS.BusinessLayer
             }
         }
 
-        /// <summary>
-        /// Retrieve one customer.
-        /// </summary>
-        public Customer Retrieve(int customerId)
-        {
-            // Code that retrieves the defined customer
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Retrieves all customers.
-        /// </summary>
-        public List<Customer> Retrieve()
-        {
-            // Code that retrieves all customers
-            return new List<Customer>();
-        }
-
-        /// <summary>
-        /// Saves the current customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // Code that saves the defined customer
-            return true;
-        }
         public bool Validate()
         {
             var isValid = true;
